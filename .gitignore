@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# MacOS and Windows OS junk
+.DS_Store
+Thumbs.db
+
+# Logs and runtime files
+*.log
+
+# Model weights and training output
+*.pth
+*.pt
+*.h5
+runs/
+checkpoints/
+weights/
+*.onnx
+
+# Videos and images
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+
+# Output datasets
+*.csv
+*.json
+output/
+data/
+datasets/
+
+# YOLO config/cache
+*.yaml
+*.cache
+*.onnx
+ultralytics/
+
+# EasyOCR temp
+tmp/
+
+# pip environment files (optional to ignore if tracked)
+pip-selfcheck.json
