@@ -37,7 +37,7 @@ class KalmanBoxTracker:
         self.kf.P *= 10
         self.kf.Q *= 0.01
 
-        self.kf.x[:4] = self.convert_bbox_to_z(bbox)
+        self.kf.x = self.convert_bbox_to_z(bbox)
         self.time_since_update = 0
         self.id = KalmanBoxTracker.count
         KalmanBoxTracker.count += 1
