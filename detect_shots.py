@@ -121,7 +121,7 @@ while cap.isOpened():
         shooter_box = None
 
         for trk in tracked_players:
-            x1, y1, x2, y2, pid, _ = trk
+            x1, y1, x2, y2, pid = trk
             px = (x1 + x2) / 2
             py = (y1 + y2) / 2
             dist = np.linalg.norm(ball_pos - np.array([px, py]))
@@ -155,7 +155,7 @@ while cap.isOpened():
     if ball_pos is not None:
         cv2.circle(vis_frame, (int(ball_pos[0]), int(ball_pos[1])), 7, (0, 255, 255), -1)
     for trk in tracked_players:
-        x1, y1, x2, y2, pid, _ = trk
+        x1, y1, x2, y2, pid = trk
         x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
         cv2.rectangle(vis_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(vis_frame, f"ID:{int(pid)}", (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,0), 2)
