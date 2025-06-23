@@ -10,6 +10,8 @@ model = YOLO("yolov8n.pt")
 ocr_reader = easyocr.Reader(["en"])
 
 cap = cv2.VideoCapture("match.mp4")
+cv2.namedWindow("Robust Shot Detector", cv2.WINDOW_NORMAL)
+
 
 tracker = Sort(max_age=10, min_hits=3, iou_threshold=0.3)
 
