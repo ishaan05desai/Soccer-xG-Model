@@ -7,7 +7,7 @@ def main():
 
     #Initialize Tracker
     tracker = Tracker('models/best.pt')
-    tracks = tracker.get_object_tracks(video_frames)
+    tracks = tracker.get_object_tracks(video_frames, read_from_stub=True, stub_path='stubs/track_stubs.pkl')
 
     
     #Save Video
